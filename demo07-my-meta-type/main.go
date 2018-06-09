@@ -8,7 +8,6 @@ import (
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
 	//windows需要下载 http://tdm-gcc.tdragon.net/download
 	"time"
-	"github.com/qor/slug"
 	"github.com/astaxie/beego"
 	"github.com/qor/media/asset_manager"
 )
@@ -22,7 +21,6 @@ type Product struct {
 	Description2 string
 	Year         string
 	ReleaseDate  time.Time
-	NameWithSlug slug.Slug
 }
 
 func main() {
