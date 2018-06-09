@@ -9,6 +9,7 @@ import (
 	//windows需要下载 http://tdm-gcc.tdragon.net/download
 	"time"
 	"github.com/qor/slug"
+	"github.com/astaxie/beego"
 )
 
 // 用户
@@ -46,7 +47,12 @@ func main() {
 
 	// 启动服务
 	mux := http.NewServeMux()
+	
+
 	Admin.MountTo("/admin", mux)
 	fmt.Println("Listening on: 9000")
-	http.ListenAndServe(":9000", mux)
+	//http.ListenAndServe(":9000", mux)
+	beego.Handler("/admin/*", mux)
+	beego.Router("/common/kindeditor/upload", &FileUploadController{},"post:Upload")
+	beego.Run()
 }
