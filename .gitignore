@@ -1,0 +1,15 @@
+.idea
+*.iml
+.DS_Store
+*.zip
+*.log
+doc
+bin
+pkg
+main
+version
+tmp
+*.exe
+*.exe~
+*.db
+demo0*
