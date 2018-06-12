@@ -25,8 +25,7 @@ func (c *UserInfoController) LoginIndex() {
 	} else {
 		c.Data["Err"] = false
 	}
-
-	c.TplName = "login.tpl"
+	c.TplName = "login.html"
 }
 
 //登录
