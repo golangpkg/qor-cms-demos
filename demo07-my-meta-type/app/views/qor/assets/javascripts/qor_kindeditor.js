@@ -21,7 +21,7 @@
         SELECTOR_COMPONENT = '[class*="mdl-js"],[class*="mdl-tooltip"]';
 
     function enable(target) {
-        console.log("################### kindeditor enable ###################");
+        //console.log("################### kindeditor enable ###################");
         /*jshint undef:false */
         var editor = KindEditor.create('#kindeditor-id',{
             uploadJson : '/common/kindeditor/upload?dir=image',
@@ -31,7 +31,7 @@
     }
 
     function disable(target) {
-        console.log("################### kindeditor disable ###################");
+        //console.log("################### kindeditor disable ###################");
     }
 
     $(function() {
@@ -49,4 +49,4 @@
     });
 });
 
-console.log("################### kindeditor load finish ###################");
+//console.log("################### kindeditor load finish ###################");
