@@ -6,6 +6,7 @@ import (
 	"github.com/qor/admin"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
+	//_ "github.com/jinzhu/gorm/dialects/mysql"
 	//windows需要下载 http://tdm-gcc.tdragon.net/download
 )
 
@@ -14,6 +15,7 @@ type User struct {
 	gorm.Model
 	Name string
 }
+
 // 产品
 type Product struct {
 	gorm.Model
@@ -23,6 +25,8 @@ type Product struct {
 
 func main() {
 	// 注册数据库，可以是sqlite3 也可以是 mysql 换下驱动就可以了。
+	//mysql_url := "root:mariadb@mariadb/qor_cms?charset=utf8&parseTime=True&loc=Local"
+	//DB, _ := gorm.Open("mysql", mysql_url)
 	DB, _ := gorm.Open("sqlite3", "demo.db")
 	DB.AutoMigrate(&User{}, &Product{}) //自动创建表。
 
