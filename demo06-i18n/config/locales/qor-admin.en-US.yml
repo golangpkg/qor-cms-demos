@@ -1,0 +1,66 @@
+en-US:
+  qor_admin:
+    actions:
+      advanced_filter: " 高级过滤"
+      bulk_edit: " 块编辑 "
+      exit_bulk_edit: " 退出块编辑 "
+      please_select_an_item: " 请选择一个 "
+      search_bar_search: " 查询 "
+    filter:
+      advanced_filter: " 高级过滤"
+      apply: " 应用 "
+      checkbox:
+        false: " 假 "
+        is_blank: " 是否空 "
+        is_present: " 是否在当前 "
+        true: " 真 "
+      number:
+        eq: " 等于 "
+        gt: " 大于 "
+        lt: " 小于 "
+      save_this_filter: " 保存这个过滤 "
+      saved_filter: " 保存过滤 "
+      strings:
+        conts: " 包含 "
+        end_with: " 结束于 "
+        eq: " 等于 "
+        start_with: " 开始于 "
+    form:
+      add: " 增加  "
+      add_items: " 增加项 "
+      are_you_sure: " 是否确定？ "
+      cancel: " 取消 "
+      cancel_edit: " 取消编辑 "
+      confirm:
+        button:
+          cancel: " 取消 "
+          ok: " 确定 "
+      crop_image: " 拷贝图片 "
+      ok: " 确定 "
+      save_changes: " 更新 "
+      select_many_hint_button: " 完成 "
+      submit: " 提交 "
+    layout:
+      header:
+        actions: " 操作 "
+      logo: "xxxx"
+      skip_to_content: " 跳至内容 "
+    pagination:
+      first: " 首页 "
+      next: " 下一页 "
+      page_num: " {{.Pages}}页 "
+      previous: " 上一页 "
+      last: " 尾页 "
+      20_entries: " 20条记录 "
+      50_entries: " 50条记录 "
+      100_entries: " 100条记录 "
+      show_all: " 全部 "
+    search_center:
+      all: " 全部 "
+      hint: " 查询… "
+      view_all: " 显示全部 "
+    showpage:
+      inlineedit:
+        button:
+            cancel_edit: " 取消编辑 "
+            save: " 保存 "
