@@ -11,8 +11,6 @@ type UserInfoController struct {
 }
 
 var (
-	cookieSecret      = beego.AppConfig.String("cookieSecret")
-	cookieName        = beego.AppConfig.String("cookieName")
 	adminPassword     = beego.AppConfig.String("adminPassword")
 	USER_SESSION_NAME = "userSession"
 )
@@ -53,9 +51,7 @@ func (c *UserInfoController) Login() {
 	//将用户对象放到session里面。
 	//c.SetSession(USER_SESSION_NAME, userName)
 	manager.SessionManager.Add(c.Ctx.ResponseWriter, c.Ctx.Request, USER_SESSION_NAME, userName)
-
 	c.Ctx.Redirect(302, "/admin")
-
 	return
 }
 
@@ -69,8 +65,6 @@ func (c *UserInfoController) Logout() {
 	sessionId := c.CruSession.SessionID()
 	logs.Info("==sessionId %s ==", sessionId)
 	//设置 SessionDomain 名称。
-	SessionDomain := beego.AppConfig.String("SessionDomain")
-	c.SetSecureCookie(cookieSecret, cookieName, "", 0, "/", SessionDomain)
 	c.DestroySession()
 	//设置返回对象。
 	c.Ctx.Redirect(302, "/auth/login")
